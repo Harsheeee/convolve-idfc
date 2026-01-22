@@ -14,7 +14,7 @@ except ImportError:
     YOLO_AVAILABLE = False
     torch = None
 
-from utils.logger import get_logger
+from doc_utils.logger import get_logger
 
 logger = get_logger()
 

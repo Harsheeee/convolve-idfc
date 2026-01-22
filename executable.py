@@ -25,16 +25,16 @@ from pathlib import Path
 # Add utils to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from utils.preprocessing import load_document, preprocess_for_ocr, preprocess_for_detection
-from utils.ocr_engine import OCREngine
-from utils.visual_detector import VisualDetector
-from utils.field_extractor import FieldExtractor, load_master_data
-from utils.logger import get_logger
-from utils.validators import create_error_result
+from doc_utils.preprocessing import load_document, preprocess_for_ocr, preprocess_for_detection
+from doc_utils.ocr_engine import OCREngine
+from doc_utils.visual_detector import VisualDetector
+from doc_utils.field_extractor import FieldExtractor, load_master_data
+from doc_utils.logger import get_logger
+from doc_utils.validators import create_error_result
 
 # Try to import LLM extractor (Ollama-based, fully offline)
 try:
-    from utils.llm_extractor import LlamaFieldExtractor
+    from doc_utils.llm_extractor import LlamaFieldExtractor
     LLM_AVAILABLE = True
 except ImportError:
     LLM_AVAILABLE = False

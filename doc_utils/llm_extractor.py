@@ -15,7 +15,7 @@ except ImportError:
     OLLAMA_AVAILABLE = False
     print("[!] Ollama not available. Install with: pip install ollama")
 
-from utils.logger import get_logger
+from doc_utils.logger import get_logger
 
 logger = get_logger()
 
